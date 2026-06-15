@@ -1,7 +1,11 @@
 import connectDB from "@/lib/db";
 
-export default async function Home() {
+async function db() {
   await connectDB();
+}
+
+export default function Home() {
+  db();
 
   return <div className="text-blue-600">PainSignal</div>;
 }
